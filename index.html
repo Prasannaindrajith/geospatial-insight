@@ -1308,14 +1308,13 @@
       <!-- SIDEBAR -->
       <div class="about-sidebar">
         <!-- Photo -->
-        <div class="about-photo-wrap" onclick="triggerPhotoUpload()" title="Click to add your photo">
-          <div class="photo-placeholder" id="photo-placeholder">
-            <div class="ph-icon">👤</div>
-            <span>Click to add your photo</span>
-          </div>
-          <img id="about-photo-img" src="" alt="Profile Photo" style="display:none;">
+       <div class="about-photo-wrap">
+         <img id="about-photo-img" 
+              src="images/profile-photo.jpg" 
+              alt="Profile Photo" 
+              style="display:block; width:100%; height:100%; object-fit:cover;">
           <div class="photo-overlay"><span>Change Photo</span></div>
-        </div>
+      </div>
         <input type="file" id="photo-upload" accept="image/*" style="display:none;" onchange="loadPhoto(this)">
 
         <!-- Name & Role -->
