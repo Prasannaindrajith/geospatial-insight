@@ -1786,7 +1786,7 @@
       <div class="modal-title" id="vm-title">Map Details</div>
       <button class="modal-close" onclick="closeModal('view-map-modal')">✕</button>
     </div>
-    <div id="vm-thumbnail" style="width:100%;aspect-ratio:16/9;background:var(--navy-3);border-radius:6px;overflow:hidden;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;color:var(--white-30);font-family:var(--font-mono);font-size:0.75rem;"></div>
+    <div id="vm-thumbnail" style="width:100%; background:var(--navy-3); border-radius:6px; overflow:hidden; margin-bottom:1.5rem; display:flex; flex-direction:column; align-items:center; justify-content:center;"></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
       <div>
         <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--cyan);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;">Category</div>
@@ -1898,14 +1898,16 @@
     updateStats();
   }
 
-  // ---- VIEW MAP MODAL ----
+ // ---- VIEW MAP MODAL (Updated for Full GIS View) ----
   function openMapModal(el) {
+    // දත්ත ලබා ගැනීම
     const title = el.dataset.title || el.querySelector('.map-title')?.textContent || 'Map Details';
     const cat   = el.dataset.cat_label || el.querySelector('.map-tag')?.textContent  || '—';
     const year  = el.dataset.year  || el.querySelector('.map-meta span:last-child')?.textContent || '—';
     const desc  = el.dataset.desc  || el.querySelector('.map-desc')?.textContent || '—';
     const imgEl = el.querySelector('.map-thumbnail img');
 
+    // Modal එකට දත්ත ඇතුළත් කිරීම
     document.getElementById('vm-title').textContent = title;
     document.getElementById('vm-cat').textContent   = cat;
     document.getElementById('vm-year').textContent  = year;
@@ -1913,9 +1915,17 @@
 
     const thumb = document.getElementById('vm-thumbnail');
     if (imgEl && imgEl.src) {
-      thumb.innerHTML = `<img src="${imgEl.src}" alt="${title}" style="width:100%;height:100%;object-fit:cover;">`;
+      // මෙහි contain දීමෙන් මුළු map එකම කැපෙන්නේ නැතිව පෙන්වයි
+      thumb.innerHTML = `
+        <a href="${imgEl.src}" target="_blank" title="Click to view full size">
+          <img src="${imgEl.src}" alt="${title}" style="width:100%; max-height:70vh; object-fit:contain; border-radius:4px; cursor:zoom-in;">
+        </a>
+        <p style="font-family:'DM Mono', monospace; font-size:0.65rem; color:var(--cyan); margin-top:10px; text-align:center; opacity:0.8;">
+          ◈ CLICK IMAGE TO EXPAND FULL RESOLUTION ◈
+        </p>
+      `;
     } else {
-      thumb.textContent = 'No preview image available';
+      thumb.innerHTML = '<div style="color:var(--white-30); padding:2rem;">No preview image available</div>';
     }
 
     document.getElementById('view-map-modal').classList.add('open');
