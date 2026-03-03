@@ -931,26 +931,31 @@
   </div>
 
   <div class="gallery-grid" id="gallery-grid">
-    <!-- SAMPLE MAP CARDS — REPLACE WITH YOUR OWN -->
-    <div class="map-card" data-cat="remote-sensing" onclick="openMapModal(this)">
-      <div class="map-thumbnail">
-        <div class="map-thumbnail">
-          <img src="images/thelissagala.jpg" alt="Thelissagala Map">  
-          <div class="map-overlay">
-            <div class="map-overlay-text">↗ View Details</div>
-           </div>
-      </div>
-      <div class="map-info">
-        <span class="map-tag">Remote Sensing</span>
-        <div class="map-title">NDVI Vegetation Analysis — Thelissagala GN Division</div>
-        <div class="map-desc">Normalized Difference Vegetation Index analysis derived from Sentinel-2 imagery to assess vegetation health and coverage in Thelissagala Grama Niladhari Division.</div>
-        <div class="map-meta">
-          <span class="map-badge">Sentinel-2</span>
-          <span>2024</span>
-        </div>
-      </div>
-    </div>
+    <div class="map-card" 
+     data-cat="remote-sensing" 
+     data-title="NDVI Vegetation Analysis — Thelissagala GN Division"
+     data-desc="Normalized Difference Vegetation Index (NDVI) analysis derived from Sentinel-2 imagery to assess vegetation health and land cover patterns in the Thelissagala GN Division. Processed via Google Earth Engine."
+     data-year="2024"
+     data-cat_label="Remote Sensing"
+     onclick="openMapModal(this)">
 
+  <div class="map-thumbnail">
+    <img src="Thelissagala GND.jpg" alt="NDVI Map Thelissagala" onerror="this.parentElement.innerHTML='<div class=map-placeholder>Image Not Found</div>'">
+    <div class="map-overlay">
+      <div class="map-overlay-text">↗ View Details</div>
+    </div>
+  </div>
+
+  <div class="map-info">
+    <span class="map-tag">Remote Sensing</span>
+    <div class="map-title">NDVI Vegetation Analysis — Thelissagala GN Division</div>
+    <div class="map-desc">Sentinel-2 imagery analysis assessing vegetation health and coverage.</div>
+    <div class="map-meta">
+      <span class="map-badge">Sentinel-2</span>
+      <span>2024</span>
+    </div>
+  </div>
+</div>
     <div class="map-card" data-cat="urban" onclick="openMapModal(this)">
       <div class="map-thumbnail">
         <div class="map-placeholder">
