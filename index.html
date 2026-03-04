@@ -931,11 +931,10 @@
     </div>
   </div>
 
-  <div class="gallery-grid" id="gallery-grid">
-    <div class="map-card" 
+  <div class="map-card" 
      data-cat="remote-sensing" 
      data-title="NDVI Vegetation Analysis — Thelissagala GN Division"
-     data-desc="Normalized Difference Vegetation Index (NDVI) analysis derived from Sentinel-2 imagery to assess vegetation health and land cover patterns in the Thelissagala GN Division. Processed via Google Earth Engine."
+     data-desc="<strong>Advanced Project Description: Remote Sensing & Vegetation Health</strong><br><br>This project focuses on assessing vegetation vigor and land cover patterns using multi-spectral satellite imagery. The analysis leverages cloud-based geospatial processing and professional desktop GIS tools.<br><br><strong>Technical Workflow:</strong><br><ul><li><strong>Cloud Computing (GEE):</strong> Leveraged Google Earth Engine (GEE) for accessing Sentinel-2 MSI Level-2A data. Implemented cloud masking algorithms and temporal median composites to ensure a high-quality, clear-sky image for the Thelissagala GND region.</li><br><li><strong>Index Calculation:</strong> Computed the Normalized Difference Vegetation Index (NDVI) using the Near-Infrared (Band 8) and Red (Band 4) spectral bands to quantify vegetation biomass and health.</li><br><li><strong>Cartographic Refinement (ArcGIS Pro):</strong> Processed the raster outputs in ArcGIS Pro for final symbology. Applied a standardized NDVI color ramp and integrated topographic vector layers for enhanced spatial context.</li><br><li><strong>Land Cover Insight:</strong> The analysis successfully differentiates between high-density vegetation, agricultural land, and sparse or built-up areas within the GN division.</li></ul>"
      data-year="2024"
      data-cat_label="Remote Sensing"
      onclick="openMapModal(this)">
@@ -943,16 +942,16 @@
   <div class="map-thumbnail">
     <img src="images/Thelissagala GND.jpg" alt="NDVI Map Thelissagala" onerror="this.parentElement.innerHTML='<div class=map-placeholder>Image Not Found</div>'">
     <div class="map-overlay">
-      <div class="map-overlay-text">↗ View Details</div>
+      <div class="map-overlay-text">↗ View Technical Details</div>
     </div>
   </div>
 
   <div class="map-info">
-    <span class="map-tag">Remote Sensing</span>
-    <div class="map-title">NDVI Vegetation Analysis — Thelissagala GN Division</div>
-    <div class="map-desc">Sentinel-2 imagery analysis assessing vegetation health and coverage.</div>
+    <span class="map-tag">Remote Sensing / GEE</span>
+    <div class="map-title">NDVI Analysis — Thelissagala GND</div>
+    <div class="map-desc">Sentinel-2 multi-spectral analysis for vegetation health assessment using GEE and ArcGIS Pro.</div>
     <div class="map-meta">
-      <span class="map-badge">Sentinel-2</span>
+      <span class="map-badge">Sentinel-2 / GEE</span>
       <span>2024</span>
     </div>
   </div>
@@ -978,53 +977,55 @@
       </div>
     </div>
 
-    <div class="map-card" 
+  <div class="map-card" 
      data-cat="hydro" 
      data-title="National Water Distribution Network in the Dry Zone of Sri Lanka"
-     data-desc="A comprehensive mapping of reservoirs, tanks, rivers, streams, and canals within the Dry Zone of Sri Lanka. Data sourced from the Department of Survey and OpenStreetMap (2025). This map highlights the critical hydraulic infrastructure in the island's arid regions."
+     data-desc="<strong>Advanced Project Description: Hydrological Modeling & Cartography</strong><br><br>Developed using ArcGIS Pro, this map visualizes the complex hydraulic infrastructure within Sri Lanka's Dry Zone. The project focuses on the spatial distribution of reservoirs, tanks, and canal networks essential for irrigation and water management.<br><br><strong>Technical Workflow:</strong><br><ul><li><strong>Data Filtering via SQL Queries:</strong> Advanced SQL queries were utilized within ArcGIS Pro to isolate and extract specific hydrological features from massive datasets, ensuring high thematic accuracy.</li><br><li><strong>Area Extraction:</strong> Precise spatial clipping and extraction techniques were applied to delineate the Dry Zone boundaries based on climatic and administrative datasets.</li><br><li><strong>Cartographic Principles & Color Balancing:</strong> Adheres to professional cartographic standards with optimized color balancing to distinguish between natural water bodies (rivers) and man-made infrastructure (canals and tanks).</li><br><li><strong>Infrastructure Mapping:</strong> Integrates high-fidelity data from the Department of Survey and OpenStreetMap (2025) to highlight critical hydraulic nodes in arid regions.</li></ul>"
      data-year="2025"
      data-cat_label="Hydrology"
      onclick="openMapModal(this)">
 
   <div class="map-thumbnail">
     <img src="images/National Water Distribution Network in the Dry Zone of Sri Lanka.jpg" alt="Water Distribution Sri Lanka" onerror="this.style.display='none'">
-    <div class="map-overlay"><div class="map-overlay-text">↗ View Details</div></div>
+    <div class="map-overlay"><div class="map-overlay-text">↗ View Technical Details</div></div>
   </div>
 
   <div class="map-info">
-    <span class="map-tag">Hydrology</span>
+    <span class="map-tag">Hydrology / ArcGIS Pro</span>
     <div class="map-title">Water Distribution Network — Dry Zone</div>
-    <div class="map-desc">Spatial mapping of hydraulic infrastructure in Sri Lanka's Dry Zone.</div>
+    <div class="map-desc">Spatial mapping and SQL-based data extraction of hydraulic infrastructure in Sri Lanka's Dry Zone.</div>
     <div class="map-meta">
-      <span class="map-badge">OSM / Survey Dept</span>
+      <span class="map-badge">SQL / ArcGIS Pro</span>
       <span>2025</span>
     </div>
   </div>
 </div>
+
+
     
 <div class="map-card" 
      data-cat="health" 
      data-title="Global COVID-19 Cumulative Cases (2020 - 2023)"
-     data-desc="Multi-temporal spatial analysis mapping the cumulative confirmed COVID-19 cases per million people globally. This time-series visualizes the spread and intensity of the pandemic across December 2020, May 2021, October 2021, May 2022, and January 2023."
+     data-desc="<strong>Advanced Project Description: Spatial Epidemiology & Temporal Analysis</strong><br><br>This project visualizes the temporal dynamics of the COVID-19 pandemic using a multi-temporal GIS framework. The analysis tracks the evolution of global infection patterns across five strategic timestamps.<br><br><strong>Technical Workflow:</strong><br><ul><li><strong>Temporal Mapping:</strong> A time-series analysis conducted at five intervals (Dec 2020, May 2021, Oct 2021, May 2022, and Jan 2023) to visualize pandemic intensity and spread.</li><br><li><strong>Data Normalization:</strong> To ensure accurate spatial comparison, data was normalized as 'cumulative confirmed cases per million people,' mitigating bias from varying national population sizes.</li><br><li><strong>Cartographic Standardization:</strong> Utilized a consistent graduated color ramp (choropleth mapping) across all timeframes to enable immediate visual cross-comparison of infection hot-spots.</li><br><li><strong>Health GIS Application:</strong> Demonstrates the application of geospatial technology in monitoring global public health crises and communicable disease patterns.</li></ul>"
      data-year="2020-2023"
      data-cat_label="Health GIS"
      onclick="openMapModal(this)">
 
   <div class="map-thumbnail">
-    <img src="images/covid19-map-2020-dec.jpg" alt="COVID-19 Map Dec 2020">
+    <img src="images/covid19-map-2020-dec.jpg" alt="COVID-19 Global Map 2020">
     
     <img src="images/covid19-map-2021-may.jpg" style="display:none;" alt="COVID-19 Map May 2021">
     <img src="images/covid19-map-2021-oct.jpg" style="display:none;" alt="COVID-19 Map Oct 2021">
     <img src="images/covid19-map-2022-may.jpg" style="display:none;" alt="COVID-19 Map May 2022">
     <img src="images/covid19-map-2023-jan.jpg" style="display:none;" alt="COVID-19 Map Jan 2023">
     
-    <div class="map-overlay"><div class="map-overlay-text">↗ View All 5 Maps</div></div>
+    <div class="map-overlay"><div class="map-overlay-text">↗ View Time-Series Analysis</div></div>
   </div>
 
   <div class="map-info">
-    <span class="map-tag">Health GIS</span>
+    <span class="map-tag">Health GIS / Temporal Analysis</span>
     <div class="map-title">Global COVID-19 Spread (2020-2023)</div>
-    <div class="map-desc">Multi-temporal mapping of cumulative COVID-19 cases globally.</div>
+    <div class="map-desc">Multi-temporal spatial mapping of cumulative infection patterns using a standardized choropleth approach.</div>
     <div class="map-meta">
       <span class="map-badge">Time-Series</span>
       <span>2020-2023</span>
@@ -1033,10 +1034,12 @@
 </div>
 
 
+
+    
 <div class="map-card" 
      data-cat="topo" 
      data-title="Location Map of Kokawewa Study Area"
-     data-desc="<strong>Advanced Project Description: Cartographic Workflow</strong><br><br>ArcGIS Pro මෘදුකාංගය භාවිතයෙන් නිර්මාණය කළ මෙම සිතියමෙහි තාක්ෂණික පැතිකඩ මෙසේය:<br><br><ul><li><strong>Spatial Reference & Data Integration:</strong> ශ්‍රී ලංකා මිනින්දෝරු දෙපාර්තමේන්තුවේ දත්ත (Vector layers) පාදක කරගනිමින්, ප්‍රාදේශීය නිරවද්‍යතාවය සඳහා SLD99 (EPSG:5235) Projected Coordinate System එක භාවිත කර ඇත.</li><li><strong>Multi-Scale Visualization (Insets):</strong> අධ්‍යයන ප්‍රදේශය Anuradhapura දිස්ත්‍රික්කය සහ ශ්‍රී ලංකා සිතියම තුළ පිහිටන ආකාරය පෙන්වීමට Multiple Map Frames භාවිත කර ඇත.</li><li><strong>Layer Hierarchies & Symbology:</strong> ජල මූලාශ්‍ර, මාර්ග පද්ධති සහ ගොඩනැගිලි පැහැදිලිව හඳුනාගැනීම සඳහා උසස් Symbology සහ Transparency මට්ටම් යොදාගෙන ඇත.</li><li><strong>Cartographic Elements:</strong> නිරවද්‍යතාවය සඳහා North Arrow, Legend සහ Multi-segment Scale Bars ක්‍රමවත්ව ඇතුළත් කර ඇත.</li></ul>"
+     data-desc="<strong>Advanced Project Description: Cartographic Workflow</strong><br><br>Developed using ArcGIS Pro, the technical profile of this spatial visualization is as follows:<br><br><ul><li><strong>Spatial Reference & Data Integration:</strong> Based on vector layers from the Department of Survey, Sri Lanka, the SLD99 (EPSG:5235) Projected Coordinate System was utilized to ensure high regional accuracy.</li><br><li><strong>Multi-Scale Visualization (Insets):</strong> Integrated multiple map frames to demonstrate the study area's context within the Anuradhapura District and the national boundaries of Sri Lanka.</li><br><li><strong>Layer Hierarchies & Symbology:</strong> Advanced symbology and transparency levels were applied for clear identification of hydrography (waterways), transport networks (roads), and the built environment (buildings).</li><br><li><strong>Cartographic Elements:</strong> Systematically included essential map elements such as a dynamic North Arrow, comprehensive Legend, and multi-segment Scale Bars for precise spatial measurement.</li></ul>"
      data-year="2025"
      data-cat_label="Topography"
      onclick="openMapModal(this)">
@@ -1049,7 +1052,7 @@
   <div class="map-info">
     <span class="map-tag">Topography / ArcGIS Pro</span>
     <div class="map-title">Location Map of Kokawewa</div>
-    <div class="map-desc">Multi-frame reference map developed using ArcGIS Pro tools.</div>
+    <div class="map-desc">High-precision reference mapping and multi-frame layout design using ArcGIS Pro tools.</div>
     <div class="map-meta">
       <span class="map-badge">ArcGIS Pro</span>
       <span>2025</span>
