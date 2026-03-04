@@ -975,24 +975,29 @@
       </div>
     </div>
 
-    <div class="map-card" data-cat="hydro" onclick="openMapModal(this)">
-      <div class="map-thumbnail">
-        <div class="map-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span>Add your map image</span>
-        </div>
-        <div class="map-overlay"><div class="map-overlay-text">↗ View Details</div></div>
-      </div>
-      <div class="map-info">
-        <span class="map-tag">Hydrology</span>
-        <div class="map-title">Watershed Delineation — [Basin Name]</div>
-        <div class="map-desc">DEM-based watershed delineation and stream network extraction using ArcGIS Spatial Analyst.</div>
-        <div class="map-meta">
-          <span class="map-badge">DEM / SRTM</span>
-          <span>[Year]</span>
-        </div>
-      </div>
+    <div class="map-card" 
+     data-cat="hydro" 
+     data-title="National Water Distribution Network in the Dry Zone of Sri Lanka"
+     data-desc="A comprehensive mapping of reservoirs, tanks, rivers, streams, and canals within the Dry Zone of Sri Lanka. Data sourced from the Department of Survey and OpenStreetMap (2025). This map highlights the critical hydraulic infrastructure in the island's arid regions."
+     data-year="2025"
+     data-cat_label="Hydrology"
+     onclick="openMapModal(this)">
+
+  <div class="map-thumbnail">
+    <img src="images/National Water Distribution Network in the Dry Zone of Sri Lanka.jpg" alt="Water Distribution Sri Lanka" onerror="this.style.display='none'">
+    <div class="map-overlay"><div class="map-overlay-text">↗ View Details</div></div>
+  </div>
+
+  <div class="map-info">
+    <span class="map-tag">Hydrology</span>
+    <div class="map-title">Water Distribution Network — Dry Zone</div>
+    <div class="map-desc">Spatial mapping of hydraulic infrastructure in Sri Lanka's Dry Zone.</div>
+    <div class="map-meta">
+      <span class="map-badge">OSM / Survey Dept</span>
+      <span>2025</span>
     </div>
+  </div>
+</div>
 
     <!-- ADD MAP CARD -->
     <div class="add-map-card" onclick="openAddMapModal()">
