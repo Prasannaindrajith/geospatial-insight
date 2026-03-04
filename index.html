@@ -1938,30 +1938,39 @@
     updateStats();
   }
 
- // ---- VIEW MAP MODAL (Updated for Full GIS View) ----
+// ---- VIEW MAP MODAL (Updated for Multiple Images) ----
   function openMapModal(el) {
-    // දත්ත ලබා ගැනීම
     const title = el.dataset.title || el.querySelector('.map-title')?.textContent || 'Map Details';
     const cat   = el.dataset.cat_label || el.querySelector('.map-tag')?.textContent  || '—';
     const year  = el.dataset.year  || el.querySelector('.map-meta span:last-child')?.textContent || '—';
     const desc  = el.dataset.desc  || el.querySelector('.map-desc')?.textContent || '—';
-    const imgEl = el.querySelector('.map-thumbnail img');
+    
+    // වෙනස මෙතනයි: පින්තූර 1ක් තිබුණත්, 10ක් තිබුණත් ඔක්කොම ගන්නවා
+    const images = el.querySelectorAll('.map-thumbnail img');
 
-    // Modal එකට දත්ත ඇතුළත් කිරීම
     document.getElementById('vm-title').textContent = title;
     document.getElementById('vm-cat').textContent   = cat;
     document.getElementById('vm-year').textContent  = year;
     document.getElementById('vm-desc').textContent  = desc;
 
     const thumb = document.getElementById('vm-thumbnail');
-    if (imgEl && imgEl.src) {
-      // මෙහි contain දීමෙන් මුළු map එකම කැපෙන්නේ නැතිව පෙන්වයි
-      thumb.innerHTML = `
-        <a href="${imgEl.src}" target="_blank" title="Click to view full size">
-          <img src="${imgEl.src}" alt="${title}" style="width:100%; max-height:70vh; object-fit:contain; border-radius:4px; cursor:zoom-in;">
-        </a>
-        <p style="font-family:'DM Mono', monospace; font-size:0.65rem; color:var(--cyan); margin-top:10px; text-align:center; opacity:0.8;">
-          ◈ CLICK IMAGE TO EXPAND FULL RESOLUTION ◈
+    thumb.innerHTML = ''; 
+
+    if (images.length > 0) {
+      images.forEach(img => {
+        if (img.src) {
+          thumb.innerHTML += `
+            <div style="margin-bottom: 2rem; width: 100%; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+              <a href="${img.src}" target="_blank" title="Click to view full size">
+                <img src="${img.src}" alt="${title}" style="width:100%; max-height:75vh; object-fit:contain; border-radius:4px; cursor:zoom-in; background: #fff;">
+              </a>
+            </div>
+          `;
+        }
+      });
+      thumb.innerHTML += `
+        <p style="font-family:'DM Mono', monospace; font-size:0.65rem; color:var(--cyan); margin-top:5px; text-align:center; opacity:0.8;">
+          ◈ SCROLL DOWN TO SEE ALL MAPS | CLICK ANY IMAGE TO EXPAND ◈
         </p>
       `;
     } else {
