@@ -927,6 +927,7 @@
       <button class="filter-btn" onclick="filterMaps('hydro',this)">Hydrology</button>
       <button class="filter-btn" onclick="filterMaps('landuse',this)">Land Use</button>
       <button class="filter-btn" onclick="filterMaps('topo',this)">Topography</button>
+      <button class="filter-btn" onclick="filterMaps('health',this)">Health GIS</button>
     </div>
   </div>
 
@@ -956,6 +957,8 @@
     </div>
   </div>
 </div>
+
+    
     <div class="map-card" data-cat="urban" onclick="openMapModal(this)">
       <div class="map-thumbnail">
         <div class="map-placeholder">
@@ -998,7 +1001,39 @@
     </div>
   </div>
 </div>
+<div class="map-card" 
+     data-cat="health" 
+     data-title="Global COVID-19 Cumulative Cases (2020 - 2023)"
+     data-desc="Multi-temporal spatial analysis mapping the cumulative confirmed COVID-19 cases per million people globally. This time-series visualizes the spread and intensity of the pandemic across December 2020, May 2021, October 2021, May 2022, and January 2023."
+     data-year="2020-2023"
+     data-cat_label="Health GIS"
+     onclick="openMapModal(this)">
 
+  <div class="map-thumbnail">
+    <img src="covid19-map-2020-dec.jpg.png" alt="COVID-19 Map Dec 2020" onerror="this.style.display='none'">
+    
+    <img src="covid19-map-2021-may.jpg.png" style="display:none;" alt="COVID-19 Map May 2021">
+    <img src="covid19-map-2021-oct.jpg.png" style="display:none;" alt="COVID-19 Map Oct 2021">
+    <img src="covid19-map-2022-may.jpg.png" style="display:none;" alt="COVID-19 Map May 2022">
+    <img src="covid19-map-2023-jan.jpg.png" style="display:none;" alt="COVID-19 Map Jan 2023">
+    
+    <div class="map-overlay"><div class="map-overlay-text">↗ View All 5 Maps</div></div>
+  </div>
+
+  <div class="map-info">
+    <span class="map-tag">Health GIS</span>
+    <div class="map-title">Global COVID-19 Spread (2020-2023)</div>
+    <div class="map-desc">Multi-temporal mapping of cumulative COVID-19 cases globally.</div>
+    <div class="map-meta">
+      <span class="map-badge">Time-Series</span>
+      <span>2020-2023</span>
+    </div>
+  </div>
+</div>
+
+
+
+    
     <!-- ADD MAP CARD -->
     <div class="add-map-card" onclick="openAddMapModal()">
       <div class="add-icon">＋</div>
@@ -1009,7 +1044,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">Geo<span>Spatial</span> Insight</div>
-      <div class="footer-copy">© 2025 [H.G.Prasanna Indrajith]</div>
+      <div class="footer-copy">© 2025 H.G.Prasanna Indrajith</div>
     </div>
   </footer>
 </div>
