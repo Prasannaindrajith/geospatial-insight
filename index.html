@@ -930,35 +930,8 @@
       <button class="filter-btn" onclick="filterMaps('web-gis',this)">Web GIS</button>
       <button class="filter-btn" onclick="filterMaps('health',this)">Health GIS</button>
     </div>
-  </div>
-<div class="map-card" 
-     data-cat="remote-sensing" 
-     data-title="Surface Water Body Extraction using NDWI"
-     data-desc="<strong>Advanced Project Description: Surface Water Extraction & Index Calculation</strong><br><br>An analytical workflow extracting surface water bodies across the Ampara District using satellite imagery. Accurate water mapping is a crucial first step for environmental monitoring and flood risk analysis.<br><br><strong>Technical Workflow:</strong><br><ul style='margin-left: 20px;'><li style='margin-bottom: 8px;'><strong>Index Calculation (Raster Calculator):</strong> Utilized Landsat 8 imagery within ArcGIS Pro to calculate the Normalized Difference Water Index (NDWI) using the formula: <code>(Band 3 - Band 5) / (Band 3 + Band 5)</code>.</li><li style='margin-bottom: 8px;'><strong>Reclassification:</strong> Grouped the resulting values to specifically isolate positive numbers, which represent water surfaces, effectively separating them from surrounding vegetation and soil.</li><li style='margin-bottom: 8px;'><strong>Vectorization (Raster to Polygon):</strong> Converted the reclassified raster pixels into vector shapes to prepare the data for advanced spatial analysis.</li><li><strong>Refinement (Dissolve & Extract):</strong> Merged polygons sharing the same water codes to create clean, continuous boundaries, filtering out non-water areas to yield the final hydrological features.</li></ul>"
-     data-year="2026"
-     data-cat_label="Remote Sensing"
-     onclick="openMapModal(this)">
-  <div class="map-thumbnail">
-    <img src="images/Surface Water Body Extraction_2.png" alt="Final Surface Water Extraction" onerror="this.style.display='none'">
-    <img src="images/Landsat 8 Imagery.png" style="display:none;" alt="Landsat 8 Imagery 1">
-    <img src="images/Landsat 8 Imagery_2.png" style="display:none;" alt="Landsat 8 Imagery 2">
-    <img src="images/NDWI.png" style="display:none;" alt="NDWI Raster 1">
-    <img src="images/NDWI_3.png" style="display:none;" alt="NDWI Raster 3">
-    <img src="images/NDWI_4.png" style="display:none;" alt="NDWI Raster 4">
-    <img src="images/Surface Water Body Extraction_1.png" style="display:none;" alt="Vector Polygon Extraction">
-    <div class="map-overlay"><div class="map-overlay-text">↗ View Workflow Details</div></div>
-  </div>
+  </div>]
 
-  <div class="map-info">
-    <span class="map-tag">Remote Sensing / Hydrology</span>
-    <div class="map-title">Surface Water Body Extraction</div>
-    <div class="map-desc">NDWI calculation and vectorization workflow using Landsat 8 imagery.</div>
-    <div class="map-meta">
-      <span class="map-badge">Landsat 8 / ArcGIS Pro</span>
-      <span>2026</span>
-    </div>
-  </div>
-</div>
   <div class="gallery-grid" id="gallery-grid">
     <div class="map-card" 
      data-cat="remote-sensing" 
