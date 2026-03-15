@@ -931,16 +931,16 @@
       <button class="filter-btn" onclick="filterMaps('health',this)">Health GIS</button>
     </div>
   </div>]
-  <div class="map-card" 
+ <div class="map-card" 
      data-cat="remote-sensing" 
      data-title="Surface Water Body Extraction using NDWI"
-     data-desc="<strong>Advanced Project Description: Surface Water Extraction</strong><br><br>An analytical workflow extracting surface water bodies across the Ampara District using satellite imagery.<br><br><strong>Technical Workflow:</strong><br><br>• <strong>Index Calculation:</strong> Utilized Landsat 8 imagery within ArcGIS Pro to calculate the Normalized Difference Water Index (NDWI) using the formula: (Band 3 - Band 5) / (Band 3 + Band 5).<br><br>• <strong>Reclassification:</strong> Grouped the resulting values to specifically isolate positive numbers, which represent water surfaces.<br><br>• <strong>Vectorization:</strong> Converted the reclassified raster pixels into vector shapes (Raster to Polygon).<br><br>• <strong>Refinement:</strong> Merged polygons sharing the same water codes to create clean boundaries, filtering out non-water areas to yield the final hydrological features."
+     data-desc="<strong>Advanced Project Description: Surface Water Extraction & Index Calculation</strong><br><br>An analytical workflow extracting surface water bodies across the Ampara District using satellite imagery. Accurate water mapping is a crucial first step for environmental monitoring and flood risk analysis.<br><br><strong>Technical Workflow:</strong><br><ul><li><strong>Index Calculation (Raster Calculator):</strong> Utilized Landsat 8 imagery within ArcGIS Pro to calculate the Normalized Difference Water Index (NDWI) using the formula: (Band 3 - Band 5) / (Band 3 + Band 5).</li><br><li><strong>Reclassification:</strong> Grouped the resulting values to specifically isolate positive numbers, which represent water surfaces, effectively separating them from surrounding vegetation and soil.</li><br><li><strong>Vectorization (Raster to Polygon):</strong> Converted the reclassified raster pixels into vector shapes to prepare the data for advanced spatial analysis.</li><br><li><strong>Refinement (Dissolve & Extract):</strong> Merged polygons sharing the same water codes to create clean, continuous boundaries, filtering out non-water areas to yield the final hydrological features.</li></ul>"
      data-year="2026"
      data-cat_label="Remote Sensing"
      onclick="openMapModal(this)">
 
   <div class="map-thumbnail">
-    <img src="images/Surface Water Body Extraction_2.png" alt="Final Surface Water Extraction" onerror="this.style.display='none'">
+    <img src="images/Surface Water Body Extraction_2.png" alt="Final Surface Water Extraction">
     
     <img src="images/Landsat 8 Imagery.png" style="display:none;" alt="Landsat 8 Imagery 1">
     <img src="images/Landsat 8 Imagery_2.png" style="display:none;" alt="Landsat 8 Imagery 2">
