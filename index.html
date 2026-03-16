@@ -932,6 +932,30 @@
     </div>
   </div>
   <div class="gallery-grid" id="gallery-grid">
+  <div class="map-card"  
+     data-cat="remote-sensing"  
+     data-title="Surface Water Body Extraction - Trincomalee District"
+     data-desc="<strong>Advanced Project Description: Multi-Spectral Surface Water Extraction</strong><br><br>This project demonstrates a high-precision analytical workflow for isolating surface water bodies within the Trincomalee District using Landsat 8 satellite data.<br><br><strong>Technical Workflow:</strong><br><ul><li><strong>Index Calculation:</strong> Computed the Normalized Difference Water Index (NDWI) using the formula: (Band 3 - Band 5) / (Band 3 + Band 5) to emphasize open water features.</li><li><strong>Spectral Reclassification:</strong> Thresholded raster values to isolate positive indices (0.2 - 1.0), effectively separating water from terrestrial land cover.</li><li><strong>Vectorization:</strong> Converted processed rasters into vector polygons for advanced spatial modeling and area calculation.</li><li><strong>Cartographic Design:</strong> Developed in ArcGIS Pro using USGS data, ensuring high topological accuracy and clear visual communication of hydrological networks.</li></ul>"
+     data-year="2023"
+     data-cat_label="Remote Sensing / Hydrology"
+     onclick="openMapModal(this)">
+
+  <div class="map-thumbnail">
+    <img src="images/Surface Water Body Extraction using NDWI.jpg" alt="Trincomalee Water Extraction">
+    <div class="map-overlay"><div class="map-overlay-text">↗ View Technical Details</div></div>
+  </div>
+
+  <div class="map-info">
+    <span class="map-tag">Remote Sensing / ArcGIS Pro</span>
+    <div class="map-title">Surface Water Extraction - Trincomalee</div>
+    <div class="map-desc">NDWI-based water body extraction and vectorization using Landsat 8.</div>
+    <div class="map-meta">
+      <span class="map-badge">USGS / Landsat 8</span>
+      <span>2023</span>
+    </div>
+  </div>
+</div>
+    
      <div class="map-card" 
      data-cat="remote-sensing" 
      data-title="Surface Water Body Extraction using NDWI"
